@@ -2,4 +2,4 @@ streamlit
 Pillow
 spacy
 pandas
-matplotlib.pyplot
+matplotlib
