@@ -1,7 +1,2 @@
 streamlit
 Pillow
-pandas
-sklearn
-joblib
-numpy
-matplotlib
