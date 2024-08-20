@@ -1,5 +1,5 @@
-streamlit
-Pillow
-spacy
-pandas
-matplotlib
+matplotlib==3.7.1
+pandas==2.1.4
+spacy==3.7.5
+ja-ginza==5.2.0
+streamlit==1.37.1
