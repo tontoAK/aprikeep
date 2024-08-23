@@ -7,23 +7,9 @@ import re
 import sys
 from spacy.lang.ru.examples import sentences
 from wordcloud import WordCloud
-#font_path = r'usr/share/fonts/opentype/ipafon-gothic/ipagp.ttf'
-path = f"@CITIBIKE.PUBLIC.FONTS/gomarice_mukasi_mukasi.ttf"
+font_path ='usr/share/fonts/opentype/ipafon-gothic/ipagp.ttf'
+#path = f"@CITIBIKE.PUBLIC.FONTS/gomarice_mukasi_mukasi.ttf"
 st.title("word cloud")
-
-# ファイルの読み込み
-with session.file.get_stream(path, decompress=False) as f:
-    s = f.read()
-
-# BytesIO: メモリ上でバイナリデータを扱うための機能
-with BytesIO() as bs:
-    bs.write(s)
-    content = bs.getvalue()
-
-# SiSの仮フォルダ領域への書き込み
-with open(f"/tmp/bom-added-gomarice_mukasi_mukasi.ttf", "wb") as s:
-    s.write(content)
-
 
 nlp = spacy.load('ja_ginza')
 pos_dic = {'名詞':'NOUN', '代名詞':'PRON', 
@@ -54,7 +40,7 @@ if uploaded_file is not None:
       doc = nlp(input_text)
       words = [token.lemma_ for token in doc
                 if token.pos_ in include_pos and token.lemma_ not in stopwords]
-      wc =WordCloud(background_color='white', font_path=f"/tmp/bom-added-gomarice_mukasi_mukasi.ttf", regexp=r"[\w']+").generate(' '.join(words))
+      wc =WordCloud(background_color='white', font_path=font_path, regexp=r"[\w']+").generate(' '.join(words))
       plt.figure(figsize=(10, 5))
       plt.imshow(wc)
       plt.axis("off")
