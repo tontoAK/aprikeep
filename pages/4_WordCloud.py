@@ -7,7 +7,7 @@ import re
 import sys
 from spacy.lang.ru.examples import sentences
 from wordcloud import WordCloud
-font_path = 'usr/share/fonts/opentype/ipafon-gothic/ipagp.ttf'
+font_path = r'usr/share/fonts/opentype/ipafon-gothic/ipagp.ttf'
 
 st.title("word cloud")
 
@@ -44,8 +44,7 @@ if uploaded_file is not None:
       plt.figure(figsize=(10, 5))
       plt.imshow(wc)
       plt.axis("off")
-      #plt.savefig('data/teetAnaR1.png')
-      #plt.show()
+      
 
       # Output
       st.write(f""" #### word cloud""")
