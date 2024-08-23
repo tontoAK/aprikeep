@@ -7,7 +7,7 @@ import re
 import sys
 from spacy.lang.ru.examples import sentences
 from wordcloud import WordCloud
-font_path = r'usr/share/fonts/opentype/ipafon-gothic/ipagp.ttf'
+font_path = 'usr/share/fonts/opentype/ipafon-gothic/ipagp.ttf'
 
 st.title("word cloud")
 
@@ -40,7 +40,7 @@ if uploaded_file is not None:
       doc = nlp(input_text)
       words = [token.lemma_ for token in doc
                 if token.pos_ in include_pos and token.lemma_ not in stopwords]
-      wc =WordCloud(background_color='white', font_path=font_path, regexp="[\w']+").generate(' '.join(words))
+      wc =WordCloud(background_color='white', font_path=font_path, regexp=r"[\w']+").generate(' '.join(words))
       plt.figure(figsize=(10, 5))
       plt.imshow(wc)
       plt.axis("off")
