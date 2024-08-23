@@ -7,7 +7,7 @@ import re
 import sys
 from spacy.lang.ru.examples import sentences
 from wordcloud import WordCloud
-font_path = 'usr/share/fonts/opentype/ipafon-gothic/ipagp.ttf'
+font_path = r'usr/share/fonts/opentype/ipafon-gothic/ipagp.ttf'
 
 st.title("word cloud")
 
