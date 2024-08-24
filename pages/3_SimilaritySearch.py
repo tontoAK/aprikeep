@@ -24,8 +24,7 @@ if uploaded_file is not None:
         tg_data['similarity'][i]=similarity
       tg_data.sort_values('similarity',ascending=False,inplace=True)
       tg_data.set_index(tg_col,inplace=True)
-      tg_data.reindex(columns=['similarity', 'comment'])
-
+      
       #Output
       st.write('類似度の高い順に表示')
       st.dataframe(tg_data)
