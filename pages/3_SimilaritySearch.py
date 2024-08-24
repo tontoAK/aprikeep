@@ -27,4 +27,5 @@ if uploaded_file is not None:
 
       #Output
       st.write('類似度の高い順に表示')
-      st.dataframe(tg_data[['similarity']])
+      st.dataframe(tg_data)
+      #st.dataframe(tg_data[['similarity']])
