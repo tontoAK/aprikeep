@@ -10,6 +10,18 @@ from sklearn.feature_extraction.text import CountVectorizer
 import numpy as np
 from PIL import Image
 
+st.markdown(
+    """
+    <style>
+    [data-testid="stSidebar"] {
+        background-color: lightgreen;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+
 
 #警告を出ないようにする
 import warnings

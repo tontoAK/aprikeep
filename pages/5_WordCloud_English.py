@@ -3,6 +3,18 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud
+
+st.markdown(
+    """
+    <style>
+    [data-testid="stSidebar"] {
+        background-color: lightgreen;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
 st.title("word cloud")
 
 # Input

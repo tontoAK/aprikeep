@@ -1,6 +1,17 @@
 import streamlit as st
 from PIL import Image
 
+st.markdown(
+    """
+    <style>
+    [data-testid="stSidebar"] {
+        background-color: lightgreen;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
 st.title("口コミ評判アプリ")
 st.write("""### サイドバーより分析方法を選択して下さい""")
 image = Image.open('AI6.jpg')

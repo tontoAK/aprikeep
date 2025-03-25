@@ -8,6 +8,18 @@ from PIL import Image
 import matplotlib.pyplot as plt
 import spacy
 
+st.markdown(
+    """
+    <style>
+    [data-testid="stSidebar"] {
+        background-color: lightgreen;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+
 st.title("ポジネガ分析")
 # input
 # シリアライズされたモデルをロード

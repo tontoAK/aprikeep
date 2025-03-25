@@ -4,6 +4,18 @@ import spacy
 import pandas as pd
 import matplotlib.pyplot as plt
 
+st.markdown(
+    """
+    <style>
+    [data-testid="stSidebar"] {
+        background-color: lightgreen;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+
 st.title("word count")
 
 # Input

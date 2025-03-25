@@ -2,6 +2,18 @@ import streamlit as st
 import spacy
 import pandas as pd
 
+st.markdown(
+    """
+    <style>
+    [data-testid="stSidebar"] {
+        background-color: lightgreen;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+
 nlp=spacy.load('ja_ginza')
 st.title("類似文検索")
 #Input
