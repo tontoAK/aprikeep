@@ -12,7 +12,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-st.title("口コミ評判アプリ")
+st.title("口コミアプリ")
 st.write("""### サイドバーより分析方法を選択して下さい""")
 image = Image.open('AI6.jpg')
 st.image(image, caption='自然言語処理',width=300)
